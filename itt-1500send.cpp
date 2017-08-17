@@ -37,14 +37,14 @@ int main(int argc, char *argv[]) {
 
     // Change protocol and pulse length accroding to parameters
     int address = atoi(argv[1]);
-	int unit = atoi(argv[2]);
-	int state = atoi(argv[3]);
+    int unit = atoi(argv[2]);
+    int state = atoi(argv[3]);
     if (argc >= 5) pin = atoi(argv[4]);
     if (argc >= 6) repeats = atoi(argv[5]);
-	if (argc >= 7) periodusec = atoi(argv[6]);
+    if (argc >= 7) periodusec = atoi(argv[6]);
 	
-	if (state == 0) bool switchstate = false;
-	if (state == 1) bool switchstate = true;
+    if (state == 0) bool switchstate = false;
+    if (state == 1) bool switchstate = true;
     
     if (wiringPiSetup () == -1) return 1;
     printf("sending code[%i]\n", code);
